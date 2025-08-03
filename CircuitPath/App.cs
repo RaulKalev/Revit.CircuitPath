@@ -13,7 +13,7 @@ namespace CircuitPath
         public Result OnStartup(UIControlledApplication application)
         {
             const string tabName = "RK Tools";
-            const string panelName = "Tools";
+            const string panelName = "Small Tools";
 
             try { application.CreateRibbonTab(tabName); } catch { }
             ribbonPanel = application.CreateOrSelectPanel(tabName, panelName);
