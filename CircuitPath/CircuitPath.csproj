@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+	<BaseOutputPath>C:\Users\mibil\OneDrive\Desktop\DevDlls\CircuitPath</BaseOutputPath>
+	<PlatformTarget>x64</PlatformTarget>
+	<Nullable>disable</Nullable>
+	<UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="ricaun.Revit.UI" Version="0.8.0" />
+  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources/AllDevices.tiff" />
+	</ItemGroup>
+  <ItemGroup>
+    <Reference Include="AdWindows">
+      <HintPath>E:\Autodesk\Revit 2024\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>E:\Autodesk\Revit 2024\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>E:\Autodesk\Revit 2024\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="Resources/AllDevices.tiff">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+</Project>
